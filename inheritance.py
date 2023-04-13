@@ -7,8 +7,8 @@ class Pet:
     def print_attributes(self): # a method for any pet that prints their attributes.
         print(f"Name: {self.name}, Age: {self.age}, Owner: {self.owner}")
 
-    def speak(self):
-        print("I am not sure what to say yet.")
+    def speak(self): # abstraction example --> we set up speak to be implemented in the parent as an abstract method.
+        raise NotImplementedError("No speak function implemented")
 
 class Dog(Pet): # this is the syntax for a Dog inheriting from Pet.
     def speak(self): # this overrides the speak function declared in the Pet class, polymorphism example.
